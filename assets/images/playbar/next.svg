@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <!-- Triangle for the arrow -->
+  <polygon points="30,20 30,80 70,50" fill="black" stroke="black" stroke-width="6" stroke-linejoin="round"/>
+  <!-- Line in front of the triangle -->
+  <rect x="80" y="20" width="3" height="60" fill="black" stroke="black" stroke-width="9" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Spotify</title>
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="utilities.css" />
+	<link rel="shortcut icon" href="../assets/favicon/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+	<div class="container flex">
+		<div class="left">
+			<div class="home">
+				<div class="logo flex center-y pointer">
+					<img class="invert" src="../assets/images/logo.svg" alt="spotify" /> 
+					<h1>Spotify</h1>
+					<div class="cancel">
+						<img class="invert" src="../assets/images/cancel.svg" alt="cancel navigation">
+					</div>
+				</div>
+				<ul>
+					<li class="flex center-y">
+						<img class="invert pointer" src="../assets/images/home.svg" alt="home" />
+						<span class="pointer">Home</span>
+					</li>
+					<li class="flex center-y">
+						<img class="invert" src="../assets/images/search.svg" alt="search" />
+						<span class="pointer">Search</span>
+					</li>
+				</ul>
+			</div>
+			<div class="library">
+				<div class="heading">
+					<img class="invert pointer" src="../assets/images/library.svg" alt="library" />
+					<span class="pointer">Your Library</span>
+					<img class="invert pointer" id="plus" src="../assets/images/plus.svg" alt="add" />
+				</div>
+				<div class="songList">
+					<ul>
+						<!-- <h3> Folder Name </h3> -->
+						<!-- <li>
+							<div class="songList-left	">
+								<img class="invert music-logo" src="../assets/images/music.svg" alt="music-logo">
+								<div class="info">
+									<div class="song-name">Song Name</div>
+									<div class="song-artist">Artist</div>
+								</div>
+							</div>
+							<div class="playnow">
+								<span class='pntext'>Play Now</span>
+								<img class="invert playSong pointer" src="../assets/images/playbar/play.svg" alt="play">
+							</div>
+						</li> -->
+					</ul>
+				</div>
+				<div class="footer">
+					<a href="https://www.spotify.com/in-en/legal/" id="">
+						<span>Legal</span>
+					</a>
+					<a href="https://www.spotify.com/in-en/safetyandprivacy/" id="">
+						<span>Safety &amp; Privacy Center</span>
+					</a>
+					<a href="https://www.spotify.com/in-en/legal/privacy-policy/" id="">
+						<span>Privacy Policy</span>
+					</a>
+					<a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3" id="">
+						<span>About Ads</span>
+					</a>
+					<a href="https://www.spotify.com/in-en/accessibility/" id="">
+						<span>Accessibility</span>
+					</a>
+					<a href="https://www.spotify.com/legal/cookies-policy/" class="cookies2" target="_blank"
+						rel="noopener">
+						<span>Cookies</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="right">
+			<div class="header center-y">
+
+				<div class="hamburger">
+					<img class="invert pointer" src="../assets/images/hamburger.svg" alt="sidebar icon">
+				</div>
+				<nav>
+					<img class="invert pointer" src="../assets/images/left-arrow.svg" alt="left" />
+					<img class="invert pointer" src="../assets/images/right-arrow.svg" alt="right" />
+				</nav>
+				<div class="buttons">
+					<button id="sign-up" class="pointer">Sign up</button>
+					<button id="log-in" class="pointer">Log in</button>
+				</div>
+			</div>
+			<div class="spotify-playlist">
+				<h2>Spotify Playlist</h2>
+				<div class="card-container">
+					<!-- Cards are added dynamically using JavaScript -->
+				</div>
+			</div>
+			<div class="playbar">
+				<div class="pb-top">
+					<span class="songinfo">Select a Song</span>
+				</div>
+				<div class="seekbar">
+					<input type="range" min="0" max="100" value="0" step="0.001" class="slider pointer" id="myRange">
+					<div class="songtime">
+						<div id="cur-time">00:00</div>
+						<div id="rem-time">00:00</div>
+					</div>
+				</div>
+				<div class="songbuttons">
+					<div class="volume-bar">
+						<!-- Image: Used as svg to control each path -->
+						<svg id="volume" class="invert pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+							<path class="path1" d="M14 14.8135V9.18646C14 6.04126 14 4.46866 13.0747 4.0773C12.1494 3.68593 11.0603 4.79793 8.88232 7.02192C7.75439 8.17365 7.11085 8.42869 5.50604 8.42869C4.10257 8.42869 3.40084 8.42869 2.89675 8.77262C1.85035 9.48655 2.00852 10.882 2.00852 12C2.00852 13.118 1.85035 14.5134 2.89675 15.2274C3.40084 15.5713 4.10257 15.5713 5.50604 15.5713C7.11085 15.5713 7.75439 15.8264 8.88232 16.9781C11.0603 19.2021 12.1494 20.3141 13.0747 19.9227C14 19.5313 14 17.9587 14 14.8135Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							<path class="path2" d="M17 9C17.6254 9.81968 18 10.8634 18 12C18 13.1366 17.6254 14.1803 17 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							<path class="path3" d="M20 7C21.2508 8.36613 22 10.1057 22 12C22 13.8943 21.2508 15.6339 20 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+						<input type="range" min="0" max="100" value="100" step="1" class="pointer" id="volume-range" style="accent-color: white;">
+						<span id="vol-value">100</span>
+					</div>
+					<img id="previous" class="uniform-size invert pointer" src="../assets/images/playbar/previous.svg" alt="">
+					<img id="play" class="uniform-size invert pointer" src="../assets/images/playbar/play.svg" alt="">
+					<img id="next" class="uniform-size invert pointer" src="../assets/images/playbar/next.svg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+
+</html>

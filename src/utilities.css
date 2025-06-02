@@ -1,0 +1,22 @@
+.border{
+    border: 2px solid red;
+}
+.flex{
+    display: flex;
+}
+.center-x{
+    justify-content: center;
+}
+.center-y{
+    align-items: center;
+}
+.invert{
+    filter: invert(1);
+}
+.uniform-size {
+    height: 100%; /* Adjust height according to your design */
+    width: auto; /* Auto adjust width to maintain aspect ratio */
+}
+.pointer{
+    cursor: pointer;
+}
