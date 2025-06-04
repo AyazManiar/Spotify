@@ -1,12 +1,17 @@
 # 🎧 Spotify Clone – Web Music Player
 Web-based Music Player, design inspired from Spotify
 
+## Tech Stack
+- HTML, CSS, JS
+- Fetch API to fetch songs from folders
+
 ## 🚀 Features
 
 ### 📱 Responsive Design
 - Optimized for various screen sizes and devices.
 
 ### 📂 Playlist & Song Management
+- Fetch API fron local Storage
 - Automatically fetches songs from `assets/songs/` folder.
 - Displays songs dynamically based on the selected playlist folder.
 - Shows playlist details from `info.json` (title, description, image).
