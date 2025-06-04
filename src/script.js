@@ -13,7 +13,6 @@ let songPaused = false
 let folders
 let currentFolder
 
-
 // Song Buttons
 const play = document.getElementById("play");
 const prev = document.getElementById("previous");
@@ -342,9 +341,6 @@ async function main() {
     cancel.addEventListener('click', (event) => {
         left.style.left = '-120%'; // Hide sidebar
     });
-
-
-    
     
 }
 main()
